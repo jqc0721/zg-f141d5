@@ -1,0 +1,700 @@
+{
+  "generated_at": "2026-06-12T20:54:10",
+  "header": {
+    "total_nav": 486826.26,
+    "cash": 45193.26,
+    "cash_pct": 9.28,
+    "market_value": 441633.0,
+    "init_capital": 500000.0,
+    "cum_return_pct": -2.6347,
+    "daily_pnl": -2209.0,
+    "daily_return_pct": -0.4517,
+    "latest_date": "2026-06-11",
+    "holdings_count": 13
+  },
+  "nav_history": [
+    {
+      "date": "2026-05-28",
+      "cash": 46598.95,
+      "market_value": 453229.6,
+      "total_nav": 499828.55,
+      "daily_pnl": 0.0,
+      "daily_return_pct": 0.0,
+      "cum_return_pct": -0.0343
+    },
+    {
+      "date": "2026-05-29",
+      "cash": 46598.95,
+      "market_value": 453532.1,
+      "total_nav": 500131.05,
+      "daily_pnl": 302.5,
+      "daily_return_pct": 0.0605,
+      "cum_return_pct": 0.0262
+    },
+    {
+      "date": "2026-06-01",
+      "cash": 46598.95,
+      "market_value": 453352.4,
+      "total_nav": 499951.35,
+      "daily_pnl": -179.7,
+      "daily_return_pct": -0.0359,
+      "cum_return_pct": -0.0097
+    },
+    {
+      "date": "2026-06-02",
+      "cash": 46598.95,
+      "market_value": 455608.5,
+      "total_nav": 502207.45,
+      "daily_pnl": 2256.1,
+      "daily_return_pct": 0.4513,
+      "cum_return_pct": 0.4415
+    },
+    {
+      "date": "2026-06-03",
+      "cash": 46598.95,
+      "market_value": 455879.4,
+      "total_nav": 502478.35,
+      "daily_pnl": 270.9,
+      "daily_return_pct": 0.0539,
+      "cum_return_pct": 0.4957
+    },
+    {
+      "date": "2026-06-04",
+      "cash": 46598.95,
+      "market_value": 453782.8,
+      "total_nav": 500381.75,
+      "daily_pnl": -2096.6,
+      "daily_return_pct": -0.4173,
+      "cum_return_pct": 0.0763
+    },
+    {
+      "date": "2026-06-05",
+      "cash": 46598.95,
+      "market_value": 449611.3,
+      "total_nav": 496210.25,
+      "daily_pnl": -4171.5,
+      "daily_return_pct": -0.8337,
+      "cum_return_pct": -0.7579
+    },
+    {
+      "date": "2026-06-08",
+      "cash": 46598.95,
+      "market_value": 441817.8,
+      "total_nav": 488416.75,
+      "daily_pnl": -7793.5,
+      "daily_return_pct": -1.5706,
+      "cum_return_pct": -2.3166
+    },
+    {
+      "date": "2026-06-09",
+      "cash": 46598.95,
+      "market_value": 446313.0,
+      "total_nav": 492911.95,
+      "daily_pnl": 4495.2,
+      "daily_return_pct": 0.9204,
+      "cum_return_pct": -1.4176
+    },
+    {
+      "date": "2026-06-10",
+      "cash": 45193.26,
+      "market_value": 443842.0,
+      "total_nav": 489035.26,
+      "daily_pnl": -3876.69,
+      "daily_return_pct": -0.7865,
+      "cum_return_pct": -2.1929
+    },
+    {
+      "date": "2026-06-11",
+      "cash": 45193.26,
+      "market_value": 441633.0,
+      "total_nav": 486826.26,
+      "daily_pnl": -2209.0,
+      "daily_return_pct": -0.4517,
+      "cum_return_pct": -2.6347
+    }
+  ],
+  "holdings": [
+    {
+      "code": "511090",
+      "name": "30年国债ETF",
+      "category": "bond_long_duration",
+      "quadrants": [
+        "growth_down_inflation_down"
+      ],
+      "alpha_pool": false,
+      "qty": 1000,
+      "avg_cost": 116.5969,
+      "last_price": 115.685,
+      "market_value": 115685.0,
+      "unrealized_pnl": -911.88,
+      "unrealized_pnl_pct": -0.78
+    },
+    {
+      "code": "511260",
+      "name": "10年国债ETF",
+      "category": "bond_mid_duration",
+      "quadrants": [
+        "growth_down_inflation_down"
+      ],
+      "alpha_pool": false,
+      "qty": 500,
+      "avg_cost": 135.96,
+      "last_price": 135.511,
+      "market_value": 67755.5,
+      "unrealized_pnl": -224.51,
+      "unrealized_pnl_pct": -0.33
+    },
+    {
+      "code": "510300",
+      "name": "沪深300ETF",
+      "category": "stock_a_large",
+      "quadrants": [
+        "growth_up_inflation_down",
+        "growth_up_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 10800,
+      "avg_cost": 4.9335,
+      "last_price": 4.751,
+      "market_value": 51310.8,
+      "unrealized_pnl": -1971.31,
+      "unrealized_pnl_pct": -3.7
+    },
+    {
+      "code": "518880",
+      "name": "黄金ETF",
+      "category": "gold",
+      "quadrants": [
+        "growth_down_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 4900,
+      "avg_cost": 9.1349,
+      "last_price": 8.506,
+      "market_value": 41679.4,
+      "unrealized_pnl": -3081.8,
+      "unrealized_pnl_pct": -6.88
+    },
+    {
+      "code": "510880",
+      "name": "红利ETF",
+      "category": "dividend",
+      "quadrants": [
+        "growth_up_inflation_up",
+        "growth_down_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 8400,
+      "avg_cost": 3.1713,
+      "last_price": 3.26,
+      "market_value": 27384.0,
+      "unrealized_pnl": 745.41,
+      "unrealized_pnl_pct": 2.8
+    },
+    {
+      "code": "512890",
+      "name": "红利低波ETF",
+      "category": "dividend_low_vol",
+      "quadrants": [
+        "growth_up_inflation_up",
+        "growth_down_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 23500,
+      "avg_cost": 1.1445,
+      "last_price": 1.162,
+      "market_value": 27307.0,
+      "unrealized_pnl": 412.35,
+      "unrealized_pnl_pct": 1.53
+    },
+    {
+      "code": "510500",
+      "name": "中证500ETF",
+      "category": "stock_a_mid",
+      "quadrants": [
+        "growth_up_inflation_down",
+        "growth_up_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 3100,
+      "avg_cost": 8.6524,
+      "last_price": 8.133,
+      "market_value": 25212.3,
+      "unrealized_pnl": -1610.23,
+      "unrealized_pnl_pct": -6.0
+    },
+    {
+      "code": "513100",
+      "name": "纳指ETF",
+      "category": "stock_overseas_tech",
+      "quadrants": [
+        "growth_up_inflation_down"
+      ],
+      "alpha_pool": false,
+      "qty": 10100,
+      "avg_cost": 2.215,
+      "last_price": 2.13,
+      "market_value": 21513.0,
+      "unrealized_pnl": -858.1,
+      "unrealized_pnl_pct": -3.84
+    },
+    {
+      "code": "159985",
+      "name": "豆粕ETF",
+      "category": "commodity_agriculture",
+      "quadrants": [
+        "growth_up_inflation_up",
+        "growth_down_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 8500,
+      "avg_cost": 2.085,
+      "last_price": 2.02,
+      "market_value": 17170.0,
+      "unrealized_pnl": -552.72,
+      "unrealized_pnl_pct": -3.12
+    },
+    {
+      "code": "512400",
+      "name": "有色金属ETF",
+      "category": "commodity_metals",
+      "quadrants": [
+        "growth_up_inflation_up",
+        "growth_down_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 8900,
+      "avg_cost": 1.992,
+      "last_price": 1.88,
+      "market_value": 16732.0,
+      "unrealized_pnl": -996.62,
+      "unrealized_pnl_pct": -5.62
+    },
+    {
+      "code": "159915",
+      "name": "创业板ETF",
+      "category": "stock_a_growth",
+      "quadrants": [
+        "growth_up_inflation_down"
+      ],
+      "alpha_pool": false,
+      "qty": 4300,
+      "avg_cost": 4.14,
+      "last_price": 3.83,
+      "market_value": 16469.0,
+      "unrealized_pnl": -1333.14,
+      "unrealized_pnl_pct": -7.49
+    },
+    {
+      "code": "513500",
+      "name": "标普500ETF",
+      "category": "stock_overseas_broad",
+      "quadrants": [
+        "growth_up_inflation_down",
+        "growth_up_inflation_up"
+      ],
+      "alpha_pool": false,
+      "qty": 5300,
+      "avg_cost": 2.5255,
+      "last_price": 2.498,
+      "market_value": 13239.4,
+      "unrealized_pnl": -145.61,
+      "unrealized_pnl_pct": -1.09
+    },
+    {
+      "code": "588000",
+      "name": "科创50ETF",
+      "category": "stock_a_innovation",
+      "quadrants": [
+        "growth_up_inflation_down"
+      ],
+      "alpha_pool": true,
+      "qty": 100,
+      "avg_cost": 1.9431,
+      "last_price": 1.756,
+      "market_value": 175.6,
+      "unrealized_pnl": -18.71,
+      "unrealized_pnl_pct": -9.63
+    }
+  ],
+  "category_exposure": {
+    "股票(A股)": 19.1,
+    "股票(海外)": 7.14,
+    "长债": 37.68,
+    "黄金": 8.56,
+    "商品": 6.96,
+    "红利防御": 11.23,
+    "Alpha池": 0.04
+  },
+  "quadrant_exposure": {
+    "growth_up_inflation_down": 17.06,
+    "growth_up_inflation_up": 18.32,
+    "growth_down_inflation_down": 37.68,
+    "growth_down_inflation_up": 17.66
+  },
+  "risk_status": {
+    "cash_buffer_pct": 9.28,
+    "cash_buffer_limit": 5.0,
+    "max_position_pct": 23.76,
+    "max_position_limit": 30.0,
+    "drawdown_pct": -3.11,
+    "drawdown_soft_limit": 5.0,
+    "drawdown_hard_limit": 10.0,
+    "warnings": []
+  },
+  "recent_decisions": [
+    {
+      "date": "2026-06-11",
+      "is_first_day": false,
+      "regime_label": "neutral",
+      "avg_stock_pct": -0.46,
+      "avg_bond_pct": -0.21,
+      "avg_gold_pct": -2.63,
+      "orders_count": 0,
+      "filled_count": 0,
+      "rejections_count": 0,
+      "total_nav_after": 486826.26,
+      "layer_notes": []
+    },
+    {
+      "date": "2026-06-10",
+      "is_first_day": false,
+      "regime_label": "neutral",
+      "avg_stock_pct": -1.55,
+      "avg_bond_pct": -0.15,
+      "avg_gold_pct": -2.99,
+      "orders_count": 4,
+      "filled_count": 4,
+      "rejections_count": 0,
+      "total_nav_after": 489035.26,
+      "layer_notes": []
+    },
+    {
+      "date": "2026-05-28",
+      "is_first_day": false,
+      "regime_label": "neutral",
+      "avg_stock_pct": 0.5,
+      "avg_bond_pct": 0.08,
+      "avg_gold_pct": -2.28,
+      "orders_count": 1,
+      "filled_count": 0,
+      "rejections_count": 0,
+      "total_nav_after": 499828.55,
+      "layer_notes": []
+    }
+  ],
+  "recent_events": [
+    {
+      "ts": "2026-06-11T17:35:01",
+      "code": "512890",
+      "name": "红利低波ETF",
+      "event_type": "breakdown_below_ma20",
+      "payload": {
+        "close": 1.162,
+        "ma20": 1.163
+      }
+    },
+    {
+      "ts": "2026-06-11T17:34:59",
+      "code": "512400",
+      "name": "有色金属ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": 2.0076,
+        "direction": "up"
+      }
+    },
+    {
+      "ts": "2026-06-11T17:34:56",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "high_volume",
+      "payload": {
+        "volume": 649152677,
+        "vol_ma20": 381054160,
+        "ratio": 1.7
+      }
+    },
+    {
+      "ts": "2026-06-11T17:34:56",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": -2.6328,
+        "direction": "down"
+      }
+    },
+    {
+      "ts": "2026-06-11T17:34:56",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "new_low_60d",
+      "payload": {
+        "close": 8.506,
+        "low_60d": 8.506
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:15",
+      "code": "512170",
+      "name": "医疗ETF",
+      "event_type": "new_low_60d",
+      "payload": {
+        "close": 0.291,
+        "low_60d": 0.291
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:14",
+      "code": "511260",
+      "name": "10年国债ETF",
+      "event_type": "high_volume",
+      "payload": {
+        "volume": 50030500,
+        "vol_ma20": 29299423,
+        "ratio": 1.71
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:14",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "high_volume",
+      "payload": {
+        "volume": 560909257,
+        "vol_ma20": 363440646,
+        "ratio": 1.54
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:14",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": -2.9872,
+        "direction": "down"
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:14",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "new_low_60d",
+      "payload": {
+        "close": 8.736,
+        "low_60d": 8.736
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:13",
+      "code": "513100",
+      "name": "纳指ETF",
+      "event_type": "breakdown_below_ma20",
+      "payload": {
+        "close": 2.143,
+        "ma20": 2.183
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:13",
+      "code": "513100",
+      "name": "纳指ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": -2.5909,
+        "direction": "down"
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:13",
+      "code": "513500",
+      "name": "标普500ETF",
+      "event_type": "breakdown_below_ma20",
+      "payload": {
+        "close": 2.515,
+        "ma20": 2.5234
+      }
+    },
+    {
+      "ts": "2026-06-11T01:12:12",
+      "code": "159915",
+      "name": "创业板ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": -2.568,
+        "direction": "down"
+      }
+    },
+    {
+      "ts": "2026-05-29T08:50:10",
+      "code": "512890",
+      "name": "红利低波ETF",
+      "event_type": "new_low_60d",
+      "payload": {
+        "close": 1.144,
+        "low_60d": 1.144
+      }
+    },
+    {
+      "ts": "2026-05-29T08:50:07",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": -2.2793,
+        "direction": "down"
+      }
+    },
+    {
+      "ts": "2026-05-29T08:50:06",
+      "code": "511090",
+      "name": "30年国债ETF",
+      "event_type": "high_volume",
+      "payload": {
+        "volume": 50206032,
+        "vol_ma20": 33043497,
+        "ratio": 1.52
+      }
+    },
+    {
+      "ts": "2026-05-29T08:50:06",
+      "code": "511260",
+      "name": "10年国债ETF",
+      "event_type": "new_high_60d",
+      "payload": {
+        "close": 135.975,
+        "high_60d": 135.975
+      }
+    },
+    {
+      "ts": "2026-05-29T08:50:05",
+      "code": "159915",
+      "name": "创业板ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": 2.0217,
+        "direction": "up"
+      }
+    },
+    {
+      "ts": "2026-05-29T08:50:05",
+      "code": "159915",
+      "name": "创业板ETF",
+      "event_type": "new_high_60d",
+      "payload": {
+        "close": 4.138,
+        "high_60d": 4.138
+      }
+    },
+    {
+      "ts": "2026-05-29T07:50:37",
+      "code": "512890",
+      "name": "红利低波ETF",
+      "event_type": "new_low_60d",
+      "payload": {
+        "close": 1.144,
+        "low_60d": 1.144
+      }
+    },
+    {
+      "ts": "2026-05-29T07:50:28",
+      "code": "511090",
+      "name": "30年国债ETF",
+      "event_type": "high_volume",
+      "payload": {
+        "volume": 50206032,
+        "vol_ma20": 33043497,
+        "ratio": 1.52
+      }
+    },
+    {
+      "ts": "2026-05-29T07:50:28",
+      "code": "511260",
+      "name": "10年国债ETF",
+      "event_type": "new_high_60d",
+      "payload": {
+        "close": 135.975,
+        "high_60d": 135.975
+      }
+    },
+    {
+      "ts": "2026-05-29T07:50:28",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": -2.2793,
+        "direction": "down"
+      }
+    },
+    {
+      "ts": "2026-05-29T07:50:26",
+      "code": "159915",
+      "name": "创业板ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": 2.0217,
+        "direction": "up"
+      }
+    },
+    {
+      "ts": "2026-05-29T07:50:26",
+      "code": "159915",
+      "name": "创业板ETF",
+      "event_type": "new_high_60d",
+      "payload": {
+        "close": 4.138,
+        "high_60d": 4.138
+      }
+    },
+    {
+      "ts": "2026-05-29T06:35:01",
+      "code": "511090",
+      "name": "30年国债ETF",
+      "event_type": "high_volume",
+      "payload": {
+        "volume": 50206032,
+        "vol_ma20": 33043497,
+        "ratio": 1.52
+      }
+    },
+    {
+      "ts": "2026-05-29T06:35:01",
+      "code": "511260",
+      "name": "10年国债ETF",
+      "event_type": "new_high_60d",
+      "payload": {
+        "close": 135.975,
+        "high_60d": 135.975
+      }
+    },
+    {
+      "ts": "2026-05-29T06:35:01",
+      "code": "518880",
+      "name": "黄金ETF",
+      "event_type": "large_move",
+      "payload": {
+        "pct_change": -2.2793,
+        "direction": "down"
+      }
+    },
+    {
+      "ts": "2026-05-29T06:35:01",
+      "code": "512890",
+      "name": "红利低波ETF",
+      "event_type": "new_low_60d",
+      "payload": {
+        "close": 1.144,
+        "low_60d": 1.144
+      }
+    }
+  ],
+  "universe_size": 15,
+  "config": {
+    "total_capital": 500000,
+    "max_single_position_pct": 30.0,
+    "max_category_pct": 60.0
+  }
+}
