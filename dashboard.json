@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T20:54:10",
+  "generated_at": "2026-06-13T13:20:57",
   "header": {
     "total_nav": 486826.26,
     "cash": 45193.26,
@@ -691,6 +691,270 @@
       }
     }
   ],
+  "architecture": {
+    "philosophy": {
+      "title": "桥水 All-Weather + Pure Alpha",
+      "summary": "用四象限框架把资产按对『增长/通胀』的反应分散配置，任何宏观环境都有资产受益；底仓求稳（All-Weather），战术池（Alpha）择机增强。",
+      "quadrants": [
+        {
+          "name": "增长↑通胀↓",
+          "alias": "金发女孩",
+          "favor": "成长股、科技"
+        },
+        {
+          "name": "增长↑通胀↑",
+          "alias": "再通胀",
+          "favor": "商品、周期、红利"
+        },
+        {
+          "name": "增长↓通胀↓",
+          "alias": "通缩衰退",
+          "favor": "长久期国债"
+        },
+        {
+          "name": "增长↓通胀↑",
+          "alias": "滞胀",
+          "favor": "黄金、商品"
+        }
+      ]
+    },
+    "pipeline": [
+      {
+        "step": "感知",
+        "desc": "每日抓 ETF 行情+宏观+事件"
+      },
+      {
+        "step": "研究员",
+        "desc": "判断市况，生成目标权重与订单"
+      },
+      {
+        "step": "风控",
+        "desc": "硬规则校验（单仓/类别/回撤）"
+      },
+      {
+        "step": "撮合",
+        "desc": "纸面账本先卖后买成交"
+      },
+      {
+        "step": "盯市",
+        "desc": "更新净值，留痕决策与事件"
+      },
+      {
+        "step": "评估",
+        "desc": "T+1/7/30 回看每条决策"
+      },
+      {
+        "step": "原则进化",
+        "desc": "每周蒸馏，更新投资原则库"
+      }
+    ],
+    "universe": [
+      {
+        "code": "510300",
+        "name": "沪深300ETF",
+        "category": "stock_a_large",
+        "quadrants": [
+          "增长↑通胀↓",
+          "增长↑通胀↑"
+        ],
+        "all_weather_weight": 12.0,
+        "alpha_pool": false,
+        "notes": "A 股大盘核心，桥水风格股票底仓"
+      },
+      {
+        "code": "510500",
+        "name": "中证500ETF",
+        "category": "stock_a_mid",
+        "quadrants": [
+          "增长↑通胀↓",
+          "增长↑通胀↑"
+        ],
+        "all_weather_weight": 6.0,
+        "alpha_pool": false,
+        "notes": "A 股中盘，弹性更大"
+      },
+      {
+        "code": "159915",
+        "name": "创业板ETF",
+        "category": "stock_a_growth",
+        "quadrants": [
+          "增长↑通胀↓"
+        ],
+        "all_weather_weight": 4.0,
+        "alpha_pool": false,
+        "notes": "成长风格代理"
+      },
+      {
+        "code": "513100",
+        "name": "纳指ETF",
+        "category": "stock_overseas_tech",
+        "quadrants": [
+          "增长↑通胀↓"
+        ],
+        "all_weather_weight": 5.0,
+        "alpha_pool": false,
+        "notes": "海外科技，与 A 股相关性低，regime 分散"
+      },
+      {
+        "code": "513500",
+        "name": "标普500ETF",
+        "category": "stock_overseas_broad",
+        "quadrants": [
+          "增长↑通胀↓",
+          "增长↑通胀↑"
+        ],
+        "all_weather_weight": 3.0,
+        "alpha_pool": false,
+        "notes": "海外宽基，美元资产对冲人民币"
+      },
+      {
+        "code": "511090",
+        "name": "30年国债ETF",
+        "category": "bond_long_duration",
+        "quadrants": [
+          "增长↓通胀↓"
+        ],
+        "all_weather_weight": 25.0,
+        "alpha_pool": false,
+        "notes": "通缩/衰退时上涨，桥水风格最重底仓之一"
+      },
+      {
+        "code": "511260",
+        "name": "10年国债ETF",
+        "category": "bond_mid_duration",
+        "quadrants": [
+          "增长↓通胀↓"
+        ],
+        "all_weather_weight": 15.0,
+        "alpha_pool": false,
+        "notes": "中久期，波动比 30 年小"
+      },
+      {
+        "code": "518880",
+        "name": "黄金ETF",
+        "category": "gold",
+        "quadrants": [
+          "增长↓通胀↑"
+        ],
+        "all_weather_weight": 10.0,
+        "alpha_pool": false,
+        "notes": "滞胀+地缘风险对冲，桥水四象限缺一不可"
+      },
+      {
+        "code": "159985",
+        "name": "豆粕ETF",
+        "category": "commodity_agriculture",
+        "quadrants": [
+          "增长↑通胀↑",
+          "增长↓通胀↑"
+        ],
+        "all_weather_weight": 4.0,
+        "alpha_pool": false,
+        "notes": "农产品代理，通胀对冲"
+      },
+      {
+        "code": "512400",
+        "name": "有色金属ETF",
+        "category": "commodity_metals",
+        "quadrants": [
+          "增长↑通胀↑",
+          "增长↓通胀↑"
+        ],
+        "all_weather_weight": 4.0,
+        "alpha_pool": false,
+        "notes": "工业金属，与商品周期高度相关"
+      },
+      {
+        "code": "510880",
+        "name": "红利ETF",
+        "category": "dividend",
+        "quadrants": [
+          "增长↑通胀↑",
+          "增长↓通胀↑"
+        ],
+        "all_weather_weight": 6.0,
+        "alpha_pool": false,
+        "notes": "高股息，抗通胀+稳定现金流"
+      },
+      {
+        "code": "512890",
+        "name": "红利低波ETF",
+        "category": "dividend_low_vol",
+        "quadrants": [
+          "增长↑通胀↑",
+          "增长↓通胀↑"
+        ],
+        "all_weather_weight": 6.0,
+        "alpha_pool": false,
+        "notes": "低波动版红利，防御属性更强"
+      },
+      {
+        "code": "512170",
+        "name": "医疗ETF",
+        "category": "sector_healthcare",
+        "quadrants": [
+          "增长↑通胀↓"
+        ],
+        "all_weather_weight": 0.0,
+        "alpha_pool": true,
+        "notes": "防御性消费，估值修复策略候选"
+      },
+      {
+        "code": "159995",
+        "name": "芯片ETF",
+        "category": "sector_semiconductor",
+        "quadrants": [
+          "增长↑通胀↓"
+        ],
+        "all_weather_weight": 0.0,
+        "alpha_pool": true,
+        "notes": "成长+周期，景气度反转策略候选"
+      },
+      {
+        "code": "588000",
+        "name": "科创50ETF",
+        "category": "stock_a_innovation",
+        "quadrants": [
+          "增长↑通胀↓"
+        ],
+        "all_weather_weight": 0.0,
+        "alpha_pool": true,
+        "notes": "硬科技代理，beta 更高"
+      }
+    ],
+    "risk_rules": [
+      {
+        "rule": "单标的上限",
+        "value": "30.0%"
+      },
+      {
+        "rule": "单类别上限",
+        "value": "60.0%"
+      },
+      {
+        "rule": "回撤预警（降仓）",
+        "value": "5%"
+      },
+      {
+        "rule": "回撤硬线（停 Alpha）",
+        "value": "10%"
+      },
+      {
+        "rule": "回撤熔断（冷启审查）",
+        "value": "15%"
+      },
+      {
+        "rule": "最低现金缓冲",
+        "value": "5.0%"
+      }
+    ],
+    "capital": {
+      "total": 500000,
+      "paper": 500000,
+      "live": 0,
+      "note": "全部纸面模拟，无真实资金。跑稳后才考虑小额实盘试验。"
+    }
+  },
   "universe_size": 15,
   "config": {
     "total_capital": 500000,
