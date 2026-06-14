@@ -75,6 +75,16 @@
 </style>
 </head>
 <body>
+<div id="gate" style="position:fixed;inset:0;background:#0d1117;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;padding:24px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+  <div style="font-size:34px">🔒</div>
+  <div style="color:#8b97a8;font-size:14px">请输入访问密码</div>
+  <input id="pw" type="password" inputmode="numeric" autocomplete="off" placeholder="••••"
+    style="font-size:20px;padding:12px 16px;border-radius:10px;border:1px solid #2a3340;background:#161b24;color:#e6e9ef;text-align:center;width:200px;letter-spacing:6px;outline:none">
+  <button id="pwbtn" style="font-size:15px;padding:11px 30px;border-radius:10px;border:none;background:#5b8cff;color:#fff;font-weight:600;cursor:pointer">进入</button>
+  <div id="pwerr" style="color:#ef5350;font-size:13px;height:18px"></div>
+  <div style="color:#3a4452;font-size:11px;margin-top:8px">纸面模拟 · 无真实资金</div>
+</div>
+
 <div class="wrap">
   <header class="top">
     <h1>📊 资管系统 · 全景仪表盘 <span id="regime" class="pill"></span> <span class="pill paper">纸面模拟</span></h1>
@@ -291,11 +301,50 @@ function riskRow(label,val,note,ok){
     <span>${label} <span class="pill ${ok?'ok':'warn'}">${ok?'正常':'注意'}</span></span>
     <span style="text-align:right"><b>${val}</b><br><span class="mut" style="font-size:11px">${note}</span></span></div>`;
 }
-fetch("dashboard.json?t="+Date.now()).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
-  .then(render).catch(e=>{
-    document.getElementById("meta").style.display="none";
-    const el=document.getElementById("err");el.style.display="block";
-    el.textContent="无法加载数据：dashboard.json 还没推送，或当天系统未运行。("+e.message+")";});
+const b64d=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function pbkdf2Master(pw,salt,iter){
+  const km=await crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveBits"]);
+  const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt,iterations:iter,hash:"SHA-256"},km,512);
+  return new Uint8Array(bits);
+}
+async function hmacKey(raw){return crypto.subtle.importKey("raw",raw,{name:"HMAC",hash:"SHA-256"},false,["sign"]);}
+function u32be(i){const a=new Uint8Array(4);a[0]=(i>>>24)&255;a[1]=(i>>>16)&255;a[2]=(i>>>8)&255;a[3]=i&255;return a;}
+function cat2(a,b){const c=new Uint8Array(a.length+b.length);c.set(a,0);c.set(b,a.length);return c;}
+async function decryptEnvelope(pw,env){
+  const salt=b64d(env.salt),iv=b64d(env.iv),ct=b64d(env.ct),tag=b64d(env.tag);
+  const master=await pbkdf2Master(pw,salt,env.iter);
+  const encKey=master.slice(0,32),macKey=master.slice(32,64);
+  const mk=await hmacKey(macKey);
+  const calc=new Uint8Array(await crypto.subtle.sign("HMAC",mk,cat2(iv,ct)));
+  let diff=tag.length===calc.length?0:1; for(let i=0;i<tag.length;i++) diff|=calc[i]^tag[i];
+  if(diff!==0) throw new Error("BADPW");
+  const ek=await hmacKey(encKey);
+  const out=new Uint8Array(ct.length), nb=Math.ceil(ct.length/32);
+  for(let i=0;i<nb;i++){
+    const blk=new Uint8Array(await crypto.subtle.sign("HMAC",ek,cat2(iv,u32be(i))));
+    const s=i*32; for(let j=0;j<32&&s+j<ct.length;j++) out[s+j]=ct[s+j]^blk[j];
+  }
+  return JSON.parse(new TextDecoder().decode(out));
+}
+function showErr(msg){document.getElementById("meta").style.display="none";const el=document.getElementById("err");el.style.display="block";el.textContent=msg;}
+async function boot(){
+  let ENV=null;
+  try{ ENV=await fetch("dashboard.json?t="+Date.now()).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}); }
+  catch(e){ document.getElementById("gate").style.display="none"; showErr("无法加载数据：dashboard.json 还没推送，或当天系统未运行。("+e.message+")"); return; }
+  if(!ENV || ENV.enc!=="zgenc1"){ document.getElementById("gate").style.display="none"; render(ENV); return; }
+  const gate=document.getElementById("gate"); gate.style.display="flex";
+  const pwEl=document.getElementById("pw"), errEl=document.getElementById("pwerr"), btn=document.getElementById("pwbtn");
+  pwEl.focus();
+  async function unlock(){
+    errEl.textContent=""; btn.disabled=true; btn.textContent="解密中…";
+    try{ const d=await decryptEnvelope(pwEl.value, ENV); gate.style.display="none"; render(d); }
+    catch(e){ btn.disabled=false; btn.textContent="进入"; errEl.textContent = e.message==="BADPW" ? "密码错误，请重试" : ("出错："+e.message); pwEl.select(); }
+  }
+  btn.addEventListener("click",unlock);
+  pwEl.addEventListener("keydown",e=>{ if(e.key==="Enter") unlock(); });
+}
+boot();
+
 </script>
 </body>
 </html>
